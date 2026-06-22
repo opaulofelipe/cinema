@@ -19,6 +19,11 @@ Substitua todo o conteúdo do seu styles.css por este:
 }
 * {
   box-sizing: border-box;
+  
+  [hidden] {
+  display: none !important;
+}
+  
 }
 html {
   scroll-behavior: smooth;
