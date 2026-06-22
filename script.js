@@ -7,7 +7,7 @@ const films = [
     country: "França",
     director: "Irmãos Lumière",
     description:
-      "Um dos primeiros filmes já existentes. Registro do cotidiano que impressionou os primeiros espectadores."
+      "Um registro simples do cotidiano que revelou o poder do movimento filmado: a chegada de um trem comum podia se transformar em espetáculo."
   },
   {
     year: 1896,
@@ -15,7 +15,7 @@ const films = [
     country: "França",
     director: "Georges Méliès",
     description:
-      "Filme de terror e efeitos especiais. Méliès torna-se o grande mago do cinema primitivo."
+      "Uma fantasia de terror feita de aparições, desaparecimentos e truques visuais. Mostra o cinema como espaço do impossível."
   },
   {
     year: 1896,
@@ -23,7 +23,7 @@ const films = [
     country: "França",
     director: "Alice Guy",
     description:
-      "Uma das primeiras narrativas ficcionais da história do cinema. A fada faz o bebê nascer de um repolho."
+      "Uma pequena fábula sobre nascimento e fantasia. Ajuda a mostrar que o cinema podia criar cenas ficcionais, não apenas registrar a realidade."
   },
   {
     year: 1897,
@@ -31,7 +31,7 @@ const films = [
     country: "França",
     director: "Georges Méliès",
     description:
-      "Cena de dança com truques como a troca de figurinos e aparições mágicas."
+      "Explora o corpo, a troca de figurinos e a surpresa visual, aproximando o cinema dos truques de palco e da ilusão teatral."
   },
   {
     year: 1898,
@@ -39,7 +39,7 @@ const films = [
     country: "França",
     director: "Georges Méliès",
     description:
-      "Quatro cabeças ganham vida e interagem. Efeitos simples, porém muito imaginativos."
+      "Méliès multiplica a própria cabeça em cena e brinca com identidade, corpo e magia, usando o corte como instrumento de transformação."
   },
   {
     year: 1899,
@@ -47,7 +47,7 @@ const films = [
     country: "França",
     director: "Georges Méliès",
     description:
-      "Uma das primeiras adaptações de conto de fadas para o cinema."
+      "Condensa o conto de fadas em quadros mágicos, transformações e aparições, mostrando a força do cinema para adaptar histórias conhecidas."
   },
   {
     year: 1900,
@@ -55,7 +55,7 @@ const films = [
     country: "França",
     director: "Georges Méliès",
     description:
-      "Músico toca vários instrumentos ao mesmo tempo. Humor e criatividade."
+      "Um músico se desdobra em vários corpos. O filme usa a repetição da imagem para transformar uma apresentação em truque cômico."
   },
   {
     year: 1901,
@@ -63,7 +63,7 @@ const films = [
     country: "Reino Unido",
     director: "James Williamson",
     description:
-      "Homem engole uma andorinha em um truque cômico que fez muito sucesso."
+      "Um homem avança em direção à câmera até parecer engoli-la, brincando com a relação entre tela, espectador e ponto de vista."
   },
   {
     year: 1902,
@@ -71,7 +71,7 @@ const films = [
     country: "França",
     director: "Georges Méliès",
     description:
-      "Ícone do cinema. Viagem fantástica em que um foguete atinge o olho da Lua."
+      "Uma aventura fantástica que transforma ciência, sonho e espetáculo em imagens inesquecíveis. O cinema aparece como máquina de imaginação."
   },
   {
     year: 1902,
@@ -79,7 +79,7 @@ const films = [
     country: "França",
     director: "Alice Guy",
     description:
-      "Comédia ficcional que mostra o talento de Alice Guy para personagens e situações cotidianas."
+      "Uma comédia sobre nascimento e vida cotidiana, revelando o interesse de Alice Guy por situações sociais, humor e personagens comuns."
   },
   {
     year: 1903,
@@ -87,7 +87,7 @@ const films = [
     country: "EUA",
     director: "Edwin S. Porter",
     description:
-      "Marco da narrativa e da montagem. Inclui ação, suspense e o primeiro plano americano."
+      "Organiza ação, crime e perseguição em sequência narrativa. A montagem passa a criar ritmo, suspense e continuidade espacial."
   },
   {
     year: 1904,
@@ -95,7 +95,7 @@ const films = [
     country: "França",
     director: "Georges Méliès",
     description:
-      "Leque ganha vida e dança. Fantasia científica com efeitos."
+      "Transforma um objeto de cena em espetáculo vivo, misturando dança, ilusão e fantasia visual típica do cinema de atrações."
   },
   {
     year: 1904,
@@ -103,7 +103,7 @@ const films = [
     country: "França",
     director: "Georges Méliès",
     description:
-      "Viagem fantástica em balão repleta de criaturas e paisagens incríveis."
+      "Uma aventura absurda e grandiosa em que a tecnologia vira delírio. O filme celebra o sonho de ir além dos limites do mundo."
   },
   {
     year: 1905,
@@ -111,7 +111,7 @@ const films = [
     country: "EUA",
     director: "Edwin S. Porter",
     description:
-      "Comédia sobre um ladrão compulsivo. Uso criativo da câmera e da edição."
+      "Contrasta crime, classe social e julgamento moral, sugerindo que a sociedade trata de forma diferente a pobreza e a riqueza."
   },
   {
     year: 1906,
@@ -119,7 +119,7 @@ const films = [
     country: "França",
     director: "Alice Guy",
     description:
-      "Comédia satírica sobre inversão de papéis de gênero. Surpreendente e moderna para a época."
+      "Inverte papéis de gênero para satirizar costumes sociais, expondo de forma cômica a rigidez das normas masculinas e femininas."
   },
   {
     year: 1906,
@@ -127,7 +127,7 @@ const films = [
     country: "Austrália",
     director: "Charles Tait",
     description:
-      "Primeiro longa-metragem narrativo da história. Baseado em fatos reais."
+      "Usa a figura de um fora-da-lei real para construir uma narrativa longa, aproximando cinema, mito popular e história nacional."
   },
   {
     year: 1906,
@@ -135,7 +135,7 @@ const films = [
     country: "França",
     director: "Alice Guy",
     description:
-      "Épico religioso com mais de 30 minutos e centenas de figurantes. Antecipa os grandes épicos do cinema."
+      "Organiza episódios religiosos em grande escala, com muitos figurantes, mostrando que o cinema podia narrar temas sagrados de forma épica."
   },
   {
     year: 1907,
@@ -143,7 +143,7 @@ const films = [
     country: "EUA",
     director: "Sidney Olcott e Frank Oakes Rose",
     description:
-      "Épico bíblico de grande espetáculo e batalhas de bigas."
+      "Aposta no espetáculo bíblico e na corrida de bigas, antecipando o interesse do cinema por cenas grandiosas e ação histórica."
   },
   {
     year: 1907,
@@ -151,7 +151,7 @@ const films = [
     country: "França",
     director: "Michel Carré",
     description:
-      "Drama baseado na parábola bíblica. Um dos primeiros longas europeus conservados."
+      "Adapta uma parábola bíblica em forma de drama filmado, mostrando a transição entre o teatro registrado e o longa narrativo."
   },
   {
     year: 1908,
@@ -159,7 +159,7 @@ const films = [
     country: "França",
     director: "Émile Cohl",
     description:
-      "Primeira animação desenhada do mundo. Simples e ousada."
+      "Um desenho em constante transformação, onde figuras surgem, desaparecem e mudam de forma. A animação nasce como metamorfose."
   },
   {
     year: 1908,
@@ -167,7 +167,7 @@ const films = [
     country: "França",
     director: "André Calmettes e Charles Le Bargy",
     description:
-      "Reconstrução histórica de um crime político real."
+      "Reconstitui um crime político com prestígio teatral, buscando afirmar o cinema como arte séria, histórica e culturalmente respeitável."
   },
   {
     year: 1909,
@@ -175,7 +175,7 @@ const films = [
     country: "EUA",
     director: "D. W. Griffith",
     description:
-      "Drama rural que mostra empatia e sensibilidade na mise-en-scène e na atuação."
+      "Contrasta especulação financeira e sofrimento popular. A montagem paralela cria uma crítica social sobre riqueza, fome e exploração."
   },
   {
     year: 1910,
@@ -183,7 +183,7 @@ const films = [
     country: "EUA",
     director: "J. Searle Dawley",
     description:
-      "Primeira adaptação cinematográfica do clássico de Mary Shelley."
+      "Adapta Mary Shelley como uma história sobre criação, medo e responsabilidade, usando efeitos visuais para materializar o monstro."
   },
   {
     year: 1911,
@@ -191,7 +191,7 @@ const films = [
     country: "Itália",
     director: "Francesco Bertolini, Adolfo Padovan e Giuseppe de Liguoro",
     description:
-      "Primeiro filme da Divina Comédia de Dante. Ambicioso e visualmente impressionante."
+      "Transforma Dante em imagens monumentais, mostrando que o cinema podia enfrentar obras literárias complexas com ambição visual."
   },
   {
     year: 1912,
@@ -199,7 +199,7 @@ const films = [
     country: "EUA",
     director: "D. W. Griffith",
     description:
-      "Aventura policial com montagem avançada e perseguições empolgantes."
+      "Explora o submundo urbano, o crime e a tensão social, usando montagem e encenação para construir suspense em espaços apertados."
   },
   {
     year: 1912,
@@ -207,7 +207,7 @@ const films = [
     country: "Reino Unido",
     director: "Michel Carré",
     description:
-      "Épico em duas partes com cerca de 2 horas de duração. Grande espetáculo internacional."
+      "Une cinema, teatro, música e espetáculo religioso, buscando criar uma experiência grandiosa, visual e emocional para o público."
   },
   {
     year: 1912,
@@ -215,7 +215,7 @@ const films = [
     country: "EUA",
     director: "Alice Guy",
     description:
-      "Um dos primeiros filmes com elenco totalmente negro conhecidos. Marco histórico de representação."
+      "Uma comédia sobre desejo, dinheiro e aparência social, lembrada também por seu elenco negro em um contexto de forte exclusão."
   },
   {
     year: 1913,
@@ -223,7 +223,7 @@ const films = [
     country: "França",
     director: "Louis Feuillade",
     description:
-      "Série policial sobre o mestre do crime Fantômas. Início das narrativas seriadas no cinema."
+      "Transforma o criminoso em figura moderna, misteriosa e recorrente, ajudando a consolidar o suspense seriado no cinema."
   },
   {
     year: 1913,
@@ -231,7 +231,7 @@ const films = [
     country: "Itália",
     director: "Enrico Guazzoni",
     description:
-      "Épico histórico ambientado na Roma antiga. Luxuosos sets e grande apelo popular."
+      "Usa a Roma antiga para criar espetáculo histórico, conflito moral e grandiosidade visual, aproximando cinema e superprodução."
   },
   {
     year: 1914,
@@ -239,7 +239,7 @@ const films = [
     country: "Itália",
     director: "Giovanni Pastrone",
     description:
-      "Épico monumental que elevou o cinema a um novo patamar artístico e técnico."
+      "Eleva a escala do épico cinematográfico com cenários monumentais e movimentos de câmera, fazendo o cinema parecer arquitetura em movimento."
   },
   {
     year: 1915,
@@ -247,7 +247,7 @@ const films = [
     country: "EUA",
     director: "D. W. Griffith",
     description:
-      "Obra controversa, mas decisiva para a linguagem do cinema: montagem paralela, escala épica e narrativa complexa."
+      "Filme tecnicamente influente e ideologicamente racista. Mostra a força da montagem narrativa e também o perigo político das imagens."
   }
 ];
 
@@ -430,8 +430,12 @@ clearButton.addEventListener("click", () => {
 
   document.querySelectorAll(".film-card").forEach((card) => {
     card.classList.remove("is-complete");
+
     const checkbox = card.querySelector('input[type="checkbox"]');
-    checkbox.checked = false;
+
+    if (checkbox) {
+      checkbox.checked = false;
+    }
   });
 
   updateProgress();
