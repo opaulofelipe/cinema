@@ -176,38 +176,56 @@ button {
   backdrop-filter: blur(16px);
 }
 
+
 .progress-ring {
   --progress: 0deg;
-  --progress-track: rgba(159, 63, 37, 0.18);
+  --progress-track: rgba(159, 63, 37, 0.14);
   --progress-fill: #562113;
 
+  position: relative;
   width: 118px;
   height: 118px;
   display: grid;
   place-items: center;
   border-radius: 50%;
+  background: var(--paper);
+  box-shadow:
+    0 14px 34px rgba(86, 33, 19, 0.12),
+    inset 0 0 0 1px rgba(20, 20, 20, 0.06);
+}
+
+.progress-ring::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
   background:
     conic-gradient(
+      from -90deg,
       var(--progress-fill) 0deg var(--progress),
       var(--progress-track) var(--progress) 360deg
     );
-  box-shadow:
-    inset 0 0 0 10px rgba(255, 249, 237, 0.85),
-    0 12px 30px rgba(86, 33, 19, 0.16);
 }
 
+.progress-ring::after {
+  content: "";
+  position: absolute;
+  inset: 16px;
+  border-radius: 50%;
+  background: var(--paper);
+  box-shadow:
+    inset 0 0 0 1px rgba(20, 20, 20, 0.08),
+    0 0 0 8px rgba(255, 249, 237, 0.55);
+}
 
 .progress-ring span {
-  width: 82px;
-  height: 82px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
+  position: relative;
+  z-index: 1;
   color: var(--navy);
-  background: var(--paper);
+  background: transparent;
   font-size: 1.35rem;
   font-weight: 900;
-  box-shadow: 0 0 0 1px rgba(20, 20, 20, 0.06);
+  line-height: 1;
 }
 
 
@@ -498,15 +516,20 @@ button {
     padding: 18px;
     border-radius: 22px;
   }
-  .progress-ring {
-    width: 92px;
-    height: 92px;
-  }
-  .progress-ring span {
-    width: 64px;
-    height: 64px;
-    font-size: 1rem;
-  }
+
+.progress-ring {
+  width: 92px;
+  height: 92px;
+}
+
+.progress-ring::after {
+  inset: 13px;
+}
+
+.progress-ring span {
+  font-size: 1rem;
+}
+
   .era-summary {
     padding: 22px;
     border-radius: 24px;
