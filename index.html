@@ -4,66 +4,79 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cinema Primitivo — Checklist</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="app">
-    <section class="hero">
-      <div class="hero-kicker">
-        Uma viagem ao nascimento da sétima arte
+  <main class="page">
+    <header class="hero">
+      <div class="hero__content">
+        <p class="eyebrow">Uma viagem ao nascimento da sétima arte</p>
+
+        <h1>
+          Cinema Primitivo
+          <span>1895–1915</span>
+        </h1>
+
+        <p class="hero__subtitle">
+          De curiosidade científica à arte de contar histórias
+        </p>
+
+        <p class="hero__text">
+          Entre 1895 e 1915, o cinema deixou de ser uma simples curiosidade tecnológica
+          para se tornar uma forma de arte capaz de emocionar, encantar e narrar histórias.
+          Foram anos de experimentação, invenção e ousadia: truques visuais, primeiras
+          animações, narrativas cada vez mais complexas e produções grandiosas que
+          lançaram as bases da linguagem cinematográfica moderna.
+        </p>
       </div>
 
-      <h1>Cinema Primitivo <span>1895–1915</span></h1>
-
-      <p>
-        Um checklist cronológico dos principais marcos do cinema primitivo:
-        filmes curtos, truques visuais, primeiras narrativas, épicos religiosos,
-        adaptações literárias e o nascimento da linguagem cinematográfica moderna.
-      </p>
-
-      <div class="hero-actions">
-        <a href="#lista" class="primary-button">Começar checklist</a>
-        <button class="ghost-button" id="resetButton" type="button">Limpar progresso</button>
-      </div>
-
-      <div class="progress-card" aria-label="Progresso do checklist">
-        <div class="progress-info">
-          <strong id="progressText">0 de 0 vistos</strong>
+      <aside class="progress-card" aria-label="Progresso do checklist">
+        <div class="progress-ring" id="progressRing">
           <span id="progressPercent">0%</span>
         </div>
 
-        <div class="progress-track">
-          <div class="progress-fill" id="progressFill"></div>
+        <div>
+          <strong id="progressText">0 de 31 filmes marcados</strong>
+          <p>Marque os filmes que você já viu.</p>
         </div>
+      </aside>
+    </header>
+
+    <section class="era-notes" aria-label="Características do cinema primitivo">
+      <article>
+        <span>01</span>
+        <p>Filmes muito curtos no início, depois longas cada vez maiores.</p>
+      </article>
+
+      <article>
+        <span>02</span>
+        <p>Truques, ilusionismo e efeitos especiais.</p>
+      </article>
+
+      <article>
+        <span>03</span>
+        <p>Adaptações literárias, peças teatrais e temas históricos e religiosos.</p>
+      </article>
+
+      <article>
+        <span>04</span>
+        <p>Nascem a montagem, os gêneros e a linguagem narrativa.</p>
+      </article>
+    </section>
+
+    <section class="toolbar" aria-label="Controles do checklist">
+      <div class="filters" role="group" aria-label="Filtrar filmes">
+        <button class="filter is-active" type="button" data-filter="all">Todos</button>
+        <button class="filter" type="button" data-filter="pending">Pendentes</button>
+        <button class="filter" type="button" data-filter="done">Concluídos</button>
       </div>
+
+      <button class="clear-button" type="button" id="clearButton">
+        Limpar seleção
+      </button>
     </section>
 
-    <section class="toolbar" aria-label="Ferramentas de busca e filtro">
-      <label class="search">
-        <span>Buscar filme</span>
-        <input
-          type="search"
-          id="searchInput"
-          placeholder="Digite título, ano ou diretor..."
-          autocomplete="off"
-        />
-      </label>
-
-      <div class="filters" role="group" aria-label="Filtros do checklist">
-        <button class="filter-button active" data-filter="all" type="button">Todos</button>
-        <button class="filter-button" data-filter="pending" type="button">Pendentes</button>
-        <button class="filter-button" data-filter="done" type="button">Marcados</button>
-      </div>
-    </section>
-
-    <section id="lista" class="movie-list" aria-label="Lista de filmes">
-      <!-- Os filmes entram aqui via JavaScript -->
-    </section>
+    <section class="film-list" id="filmList" aria-label="Lista de filmes"></section>
   </main>
 
   <script src="script.js"></script>
