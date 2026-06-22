@@ -1,3 +1,5 @@
+Substitua todo o conteúdo do seu styles.css por este:
+
 :root {
   --bg: #f4efe4;
   --paper: #fff9ed;
@@ -15,18 +17,16 @@
   --radius-lg: 22px;
   --radius-md: 14px;
 }
-
 * {
   box-sizing: border-box;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 body {
   margin: 0;
   min-height: 100vh;
+  overflow-x: hidden;
   color: var(--ink);
   font-family:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
@@ -36,7 +36,6 @@ body {
     radial-gradient(circle at bottom right, rgba(13, 27, 42, 0.12), transparent 30rem),
     linear-gradient(180deg, #f8f2e7 0%, var(--bg) 100%);
 }
-
 body::before {
   content: "";
   position: fixed;
@@ -48,22 +47,18 @@ body::before {
     linear-gradient(90deg, rgba(20, 20, 20, 0.025) 1px, transparent 1px);
   background-size: 24px 24px;
 }
-
 button,
 input {
   font: inherit;
 }
-
 button {
   cursor: pointer;
 }
-
 .page {
   width: min(100% - 32px, 980px);
   margin: 0 auto;
   padding: 28px 0 56px;
 }
-
 .hero {
   position: relative;
   overflow: hidden;
@@ -71,6 +66,7 @@ button {
   grid-template-columns: 1fr auto;
   gap: 28px;
   align-items: end;
+  min-width: 0;
   padding: clamp(28px, 5vw, 56px);
   border: 1px solid var(--line);
   border-radius: var(--radius-xl);
@@ -79,7 +75,6 @@ button {
     var(--paper);
   box-shadow: var(--shadow);
 }
-
 .hero::before {
   content: "";
   position: absolute;
@@ -95,7 +90,6 @@ button {
       var(--navy) 30px 50px
     );
 }
-
 .hero::after {
   content: "";
   position: absolute;
@@ -109,13 +103,14 @@ button {
     radial-gradient(circle, transparent 0 38%, rgba(13, 27, 42, 0.08) 39% 42%, transparent 43%),
     radial-gradient(circle, rgba(159, 63, 37, 0.14), transparent 64%);
 }
-
 .hero__content,
 .progress-card {
   position: relative;
   z-index: 1;
 }
-
+.hero__content {
+  min-width: 0;
+}
 .eyebrow {
   margin: 0 0 12px;
   color: var(--accent);
@@ -124,30 +119,31 @@ button {
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
-
-h1 {
-  max-width: 760px;
+.site-title {
+  max-width: 100%;
   margin: 0;
   color: var(--navy);
-  font-family:
-    Georgia, "Times New Roman", serif;
-  font-size: clamp(3.1rem, 10vw, 6.8rem);
-  line-height: 0.84;
-  letter-spacing: -0.08em;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3rem, 9vw, 6.4rem);
+  line-height: 0.86;
+  letter-spacing: -0.055em;
   text-transform: uppercase;
 }
-
-h1 span {
+.site-title span {
   display: block;
-  margin-top: 14px;
+  max-width: 100%;
+}
+.site-title__years {
+  display: block;
+  margin-top: 18px;
   color: var(--accent-dark);
   font-family:
     Inter, ui-sans-serif, system-ui, sans-serif;
-  font-size: clamp(1.05rem, 2.6vw, 1.55rem);
+  font-size: clamp(1.05rem, 3vw, 1.55rem);
   line-height: 1;
+  font-weight: 900;
   letter-spacing: 0.18em;
 }
-
 .hero__subtitle {
   margin: 26px 0 12px;
   color: var(--accent);
@@ -156,7 +152,6 @@ h1 span {
   font-weight: 700;
   line-height: 1.15;
 }
-
 .hero__text {
   max-width: 720px;
   margin: 0;
@@ -164,7 +159,6 @@ h1 span {
   font-size: 1rem;
   line-height: 1.75;
 }
-
 .progress-card {
   width: min(100%, 250px);
   display: grid;
@@ -176,7 +170,6 @@ h1 span {
   background: rgba(255, 255, 255, 0.48);
   backdrop-filter: blur(16px);
 }
-
 .progress-ring {
   --progress: 0deg;
   width: 118px;
@@ -188,7 +181,6 @@ h1 span {
     conic-gradient(var(--accent) var(--progress), rgba(20, 20, 20, 0.09) 0deg);
   box-shadow: inset 0 0 0 10px rgba(255, 249, 237, 0.85);
 }
-
 .progress-ring span {
   width: 82px;
   height: 82px;
@@ -200,13 +192,11 @@ h1 span {
   font-size: 1.35rem;
   font-weight: 900;
 }
-
 .progress-card strong {
   display: block;
   text-align: center;
   font-size: 0.98rem;
 }
-
 .progress-card p {
   margin: 6px 0 0;
   color: var(--muted);
@@ -214,43 +204,31 @@ h1 span {
   font-size: 0.88rem;
   line-height: 1.45;
 }
-
-.era-notes {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
+.era-summary {
   margin: 18px 0;
-}
-
-.era-notes article {
-  min-height: 132px;
-  padding: 18px;
+  padding: clamp(22px, 4vw, 34px);
   border: 1px solid var(--line);
-  border-radius: 22px;
-  background: rgba(255, 249, 237, 0.72);
-  box-shadow: 0 14px 34px rgba(46, 31, 12, 0.06);
+  border-radius: var(--radius-xl);
+  background:
+    linear-gradient(135deg, rgba(255, 249, 237, 0.88), rgba(251, 241, 220, 0.78)),
+    var(--paper);
+  box-shadow: 0 16px 42px rgba(46, 31, 12, 0.08);
 }
-
-.era-notes span {
-  display: inline-grid;
-  place-items: center;
-  width: 34px;
-  height: 34px;
-  margin-bottom: 18px;
-  border-radius: 50%;
-  color: var(--paper);
-  background: var(--navy);
-  font-size: 0.76rem;
+.era-summary__label {
+  margin: 0 0 12px;
+  color: var(--accent);
+  font-size: 0.78rem;
   font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
-
-.era-notes p {
+.era-summary p:last-child {
+  max-width: 860px;
   margin: 0;
   color: #332b22;
-  font-size: 0.92rem;
-  line-height: 1.48;
+  font-size: clamp(1rem, 2.3vw, 1.14rem);
+  line-height: 1.75;
 }
-
 .toolbar {
   position: sticky;
   z-index: 10;
@@ -267,13 +245,11 @@ h1 span {
   backdrop-filter: blur(18px);
   box-shadow: 0 18px 50px rgba(46, 31, 12, 0.08);
 }
-
 .filters {
   display: flex;
   gap: 6px;
   min-width: 0;
 }
-
 .filter,
 .clear-button {
   border: 0;
@@ -284,24 +260,20 @@ h1 span {
     color 180ms ease,
     opacity 180ms ease;
 }
-
 .filter {
   padding: 10px 15px;
   color: var(--muted);
   background: transparent;
   font-weight: 800;
 }
-
 .filter:hover,
 .clear-button:hover {
   transform: translateY(-1px);
 }
-
 .filter.is-active {
   color: var(--paper);
   background: var(--navy);
 }
-
 .clear-button {
   padding: 10px 16px;
   color: var(--accent-dark);
@@ -309,12 +281,10 @@ h1 span {
   font-weight: 850;
   white-space: nowrap;
 }
-
 .film-list {
   display: grid;
   gap: 14px;
 }
-
 .film-card {
   position: relative;
   display: grid;
@@ -335,7 +305,6 @@ h1 span {
     background 220ms ease,
     border-color 220ms ease;
 }
-
 .film-card::before {
   content: "";
   position: absolute;
@@ -344,23 +313,19 @@ h1 span {
   border-radius: var(--radius-lg) 0 0 var(--radius-lg);
   background: linear-gradient(180deg, var(--accent), var(--gold));
 }
-
 .film-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 20px 54px rgba(46, 31, 12, 0.12);
 }
-
 .film-card.is-complete {
   filter: grayscale(1) blur(0.45px);
   opacity: 0.56;
   transform: scale(0.995);
   border-color: rgba(20, 20, 20, 0.08);
 }
-
 .film-card.is-complete:hover {
   transform: scale(0.995);
 }
-
 .film-year {
   display: grid;
   place-items: center;
@@ -376,11 +341,9 @@ h1 span {
   font-weight: 900;
   letter-spacing: -0.04em;
 }
-
 .film-content {
   min-width: 0;
 }
-
 .film-title {
   margin: 0;
   color: var(--navy);
@@ -388,7 +351,6 @@ h1 span {
   font-size: clamp(1.25rem, 4vw, 1.72rem);
   line-height: 1.05;
 }
-
 .film-meta {
   margin: 8px 0 10px;
   color: var(--accent-dark);
@@ -396,27 +358,23 @@ h1 span {
   font-weight: 850;
   line-height: 1.35;
 }
-
 .film-description {
   margin: 0;
   color: #393027;
   font-size: 0.98rem;
   line-height: 1.62;
 }
-
 .check {
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
-
 .check input {
   position: absolute;
   opacity: 0;
   pointer-events: none;
 }
-
 .check span {
   width: 46px;
   height: 46px;
@@ -430,7 +388,6 @@ h1 span {
     border-color 180ms ease,
     transform 180ms ease;
 }
-
 .check span::after {
   content: "";
   width: 16px;
@@ -440,25 +397,20 @@ h1 span {
   transform: rotate(-45deg) translateY(-1px);
   transition: border-color 180ms ease;
 }
-
 .check input:focus-visible + span {
   outline: 3px solid rgba(159, 63, 37, 0.24);
   outline-offset: 4px;
 }
-
 .check input:checked + span {
   border-color: var(--accent);
   background: var(--accent);
 }
-
 .check input:checked + span::after {
   border-color: var(--paper);
 }
-
 .check:hover span {
   transform: scale(1.04);
 }
-
 .empty-state {
   padding: 36px 20px;
   border: 1px dashed rgba(20, 20, 20, 0.18);
@@ -467,86 +419,102 @@ h1 span {
   background: rgba(255, 249, 237, 0.58);
   text-align: center;
 }
-
 @media (max-width: 860px) {
   .page {
     width: min(100% - 22px, 760px);
     padding-top: 12px;
   }
-
   .hero {
     grid-template-columns: 1fr;
     padding: 32px 22px;
   }
-
   .progress-card {
     width: 100%;
     grid-template-columns: auto 1fr;
     justify-items: start;
     text-align: left;
   }
-
   .progress-card strong,
   .progress-card p {
     text-align: left;
   }
-
-  .era-notes {
-    grid-template-columns: 1fr 1fr;
-  }
 }
-
 @media (max-width: 620px) {
+  .page {
+    width: min(100% - 20px, 100%);
+    padding-bottom: 40px;
+  }
   .hero {
+    padding: 32px 22px 24px;
     border-radius: 26px;
   }
-
-  h1 {
-    font-size: clamp(3rem, 17vw, 5rem);
+  .eyebrow {
+    max-width: 100%;
+    font-size: 0.76rem;
+    line-height: 1.45;
+    letter-spacing: 0.14em;
   }
-
+  .site-title {
+    font-size: clamp(2.85rem, 15.4vw, 4rem);
+    line-height: 0.9;
+    letter-spacing: -0.045em;
+  }
+  .site-title__years {
+    margin-top: 14px;
+    font-size: 1.05rem;
+    letter-spacing: 0.16em;
+  }
+  .hero__subtitle {
+    margin-top: 24px;
+    font-size: clamp(1.45rem, 7vw, 2rem);
+    line-height: 1.12;
+  }
   .hero__text {
-    font-size: 0.96rem;
+    font-size: 0.98rem;
+    line-height: 1.85;
   }
-
+  .progress-card {
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    padding: 18px;
+    border-radius: 22px;
+  }
   .progress-ring {
     width: 92px;
     height: 92px;
   }
-
   .progress-ring span {
     width: 64px;
     height: 64px;
     font-size: 1rem;
   }
-
-  .era-notes {
-    grid-template-columns: 1fr;
+  .era-summary {
+    padding: 22px;
+    border-radius: 24px;
   }
-
+  .era-summary p:last-child {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
   .toolbar {
     position: static;
     flex-direction: column;
     align-items: stretch;
     border-radius: 24px;
   }
-
   .filters {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
-
   .filter,
   .clear-button {
     width: 100%;
   }
-
   .film-card {
     grid-template-columns: 1fr auto;
     gap: 14px;
     padding: 18px;
   }
-
   .film-year {
     grid-column: 1 / 2;
     width: fit-content;
@@ -555,12 +523,10 @@ h1 span {
     border-radius: 999px;
     font-size: 1.15rem;
   }
-
   .film-content {
     grid-column: 1 / -1;
     order: 3;
   }
-
   .check {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
@@ -568,7 +534,26 @@ h1 span {
     justify-self: end;
   }
 }
-
+@media (max-width: 380px) {
+  .hero {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .site-title {
+    font-size: clamp(2.55rem, 14.5vw, 3.45rem);
+  }
+  .site-title__years {
+    font-size: 0.95rem;
+  }
+  .progress-card {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .progress-card strong,
+  .progress-card p {
+    text-align: center;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
