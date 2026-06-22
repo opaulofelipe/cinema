@@ -365,6 +365,7 @@ function updateProgress() {
   progressRing.style.setProperty("--progress", `${degrees}deg`);
 }
 
+
 function applyFilter() {
   const cards = document.querySelectorAll(".film-card");
   let visibleCount = 0;
@@ -377,10 +378,13 @@ function applyFilter() {
       (currentFilter === "done" && isDone) ||
       (currentFilter === "pending" && !isDone);
 
-    card.hidden = !shouldShow;
-
     if (shouldShow) {
+      card.hidden = false;
+      card.style.display = "";
       visibleCount += 1;
+    } else {
+      card.hidden = true;
+      card.style.display = "none";
     }
   });
 
