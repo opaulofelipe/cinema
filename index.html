@@ -1,579 +1,68 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cinema Primitivo — Checklist</title>
-  <link rel="stylesheet" href="styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="page">
-    <header class="hero" aria-labelledby="page-title">
-      <div class="hero-visual" aria-hidden="true">
-        <img class="cameraman" src="assets/cameraman.png" alt="">
-        <span class="visual-caption">1895–1915</span>
+  <main class="app">
+    <section class="hero">
+      <div class="hero-kicker">
+        Uma viagem ao nascimento da sétima arte
       </div>
 
-      <div class="hero-copy">
-        <p class="kicker">★ Uma viagem ao nascimento da sétima arte ★</p>
-        <h1 id="page-title">Cinema Primitivo <span>(1895–1915)</span></h1>
-        <p class="tagline">De curiosidade científica à arte de contar histórias</p>
-        <p class="intro">Entre 1895 e 1915, o cinema deixou de ser uma simples curiosidade tecnológica para se tornar uma forma de arte capaz de emocionar, encantar e narrar histórias. Foram anos de experimentação, invenção e ousadia: truques visuais, primeiras animações, narrativas cada vez mais complexas e produções grandiosas que lançaram as bases da linguagem cinematográfica moderna.</p>
+      <h1>Cinema Primitivo <span>1895–1915</span></h1>
 
-        <div class="hero-actions" aria-label="Ações e informações rápidas">
-          <a class="start-button" href="#checklist">Começar checklist</a>
-          <span class="hero-pill"><strong>31</strong> filmes</span>
-          <span class="hero-pill">progresso salvo</span>
+      <p>
+        Um checklist cronológico dos principais marcos do cinema primitivo:
+        filmes curtos, truques visuais, primeiras narrativas, épicos religiosos,
+        adaptações literárias e o nascimento da linguagem cinematográfica moderna.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#lista" class="primary-button">Começar checklist</a>
+        <button class="ghost-button" id="resetButton" type="button">Limpar progresso</button>
+      </div>
+
+      <div class="progress-card" aria-label="Progresso do checklist">
+        <div class="progress-info">
+          <strong id="progressText">0 de 0 vistos</strong>
+          <span id="progressPercent">0%</span>
+        </div>
+
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill"></div>
         </div>
       </div>
-
-      <aside class="era-box" aria-label="O que marca essa era">
-        <div class="era-title">O que marca essa era?</div>
-        <ul class="era-list">
-          <li><span class="era-icon">🎥</span><span>Filmes muito curtos no início, depois longas cada vez maiores</span></li>
-          <li><span class="era-icon">🎩</span><span>Truques, ilusionismo e efeitos especiais</span></li>
-          <li><span class="era-icon">📖</span><span>Adaptações literárias, peças teatrais e temas históricos e religiosos</span></li>
-          <li><span class="era-icon">◉</span><span>Nascem a montagem, os gêneros e a linguagem narrativa</span></li>
-        </ul>
-      </aside>
-    </header>
-
-    <div class="filmstrip" aria-hidden="true"></div>
-    <div class="section-ribbon">★ Um filme para cada ano: 1895–1915 ★</div>
-
-    <section class="checkbar" aria-label="Progresso do checklist">
-      <span class="progress-text" data-progress>0/31 filmes marcados</span>
-      <button class="reset-button" type="button" data-reset>Limpar marcações</button>
     </section>
 
-    <section class="timeline" id="checklist" aria-label="Checklist de filmes do cinema primitivo">
-        <label class="movie-card" role="checkbox" aria-checked="false" style="--badge: #12456f">
-          <input class="movie-check" type="checkbox" data-id="01-a-chegada-do-trem-a-estacao" aria-label="Marcar A Chegada do Trem à Estação como visto">
-          <span class="card-inner">
-            <span class="year-badge" aria-hidden="true">
-              <span class="year">1895</span>
-              <span class="badge-icon">🚂</span>
-            </span>
-            <span class="movie-still">
-              <img src="assets/arrival-train.png" alt="Imagem do filme A Chegada do Trem à Estação" loading="lazy">
-            </span>
-            <span class="movie-copy">
-              <h2>A Chegada do Trem à Estação</h2>
-              <p class="credit">(França, Irmãos Lumière)</p>
-              <p class="description">Um dos primeiros filmes já existentes. Registro do cotidiano que impressionou os primeiros espectadores.</p>
-            </span>
-          </span>
-        </label>
-        <label class="movie-card" role="checkbox" aria-checked="false" style="--badge: #3e7447">
-          <input class="movie-check" type="checkbox" data-id="02-le-manoir-du-diable" aria-label="Marcar Le Manoir du Diable como visto">
-          <span class="card-inner">
-            <span class="year-badge" aria-hidden="true">
-              <span class="year">1896</span>
-              <span class="badge-icon">🏰</span>
-            </span>
-            <span class="movie-still">
-              <img src="assets/manoir-diable.png" alt="Imagem do filme Le Manoir du Diable" loading="lazy">
-            </span>
-            <span class="movie-copy">
-              <h2>Le Manoir du Diable</h2>
-              <p class="credit">(França, Georges Méliès)</p>
-              <p class="description">Filme de terror e efeitos especiais. Méliès torna-se o grande mago do cinema primitivo.</p>
-            </span>
-          </span>
-        </label>
-        <label class="movie-card" role="checkbox" aria-checked="false" style="--badge: #56356f">
-          <input class="movie-check" type="checkbox" data-id="03-la-fee-aux-choux" aria-label="Marcar La Fée aux Choux como visto">
-          <span class="card-inner">
-            <span class="year-badge" aria-hidden="true">
-              <span class="year">1896</span>
-              <span class="badge-icon">✦</span>
-            </span>
-            <span class="movie-still">
-              <img src="assets/fee-choux.png" alt="Imagem do filme La Fée aux Choux" loading="lazy">
-            </span>
-            <span class="movie-copy">
-              <h2>La Fée aux Choux</h2>
-              <p class="credit">(França, Alice Guy)</p>
-              <p class="description">Uma das primeiras narrativas ficcionais da história do cinema. A fada faz o bebê nascer de um repolho.</p>
-            </span>
-          </span>
-        </label>
-        <label class="movie-card" role="checkbox" aria-checked="false" style="--badge: #bd5a16">
-          <input class="movie-check" type="checkbox" data-id="04-after-the-ball" aria-label="Marcar After the Ball como visto">
-          <span class="card-inner">
-            <span class="year-badge" aria-hidden="true">
-              <span class="year">1897</span>
-              <span class="badge-icon">♟</span>
-            </span>
-            <span class="movie-still">
-              <img src="assets/after-ball.png" alt="Imagem do filme After the Ball" loading="lazy">
-            </span>
-            <span class="movie-copy">
-              <h2>After the Ball</h2>
-              <p class="credit">(França, Georges Méliès)</p>
-              <p class="description">Cena de dança com truques como a troca de figurinos e aparições mágicas.</p>
-            </span>
-          </span>
-        </label>
-        <label class="movie-card" role="checkbox" aria-checked="false" style="--badge: #503879">
-          <input class="movie-check" type="checkbox" data-id="05-the-four-troublesome-heads" aria-label="Marcar The Four Troublesome Heads como visto">
-          <span class="card-inner">
-            <span class="year-badge" aria-hidden="true">
-              <span class="year">1898</span>
-              <span class="badge-icon">◉</span>
-            </span>
-            <span class="movie-still">
-              <img src="assets/four-heads.png" alt="Imagem do filme The Four Troublesome Heads" loading="lazy">
-            </span>
-            <span class="movie-copy">
-              <h2>The Four Troublesome Heads</h2>
-              <p class="credit">(França, Georges Méliès)</p>
-              <p class="description">Quatro cabeças ganham vida e interagem. Efeitos simples, porém muito imaginativos.</p>
-            </span>
-          </span>
-        </label>
-        <label class="movie-card" role="checkbox" aria-checked="false" style="--badge: #cf7b13">
-          <input class="movie-check" type="checkbox" data-id="06-cinderella" aria-label="Marcar Cinderella como visto">
-          <span class="card-inner">
-            <span class="year-badge" aria-hidden="true">
-              <span class="year">1899</span>
-              <span class="badge-icon">⌁</span>
-            </span>
-            <span class="movie-still">
-              <img src="assets/cinderella.png" alt="Imagem do filme Cinderella" loading="lazy">
-            </span>
-            <span class="movie-copy">
-              <h2>Cinderella</h2>
-              <p class="credit">(França, Georges Méliès)</p>
-              <p class="description">Uma das primeiras adaptações de conto de fadas para o cinema.</p>
-            </span>
-          </span>
-        </label>
-        <label class="movie-card" role="checkbox" aria-checked="false" style="--badge: #00847f">
-          <input class="movie-check" type="checkbox" data-id="07-the-one-man-band" aria-label="Marcar The One-Man Band como visto">
-          <span class="card-inner">
-            <span class="year-badge" aria-hidden="true">
-              <span class="year">1900</span>
-              <span class="badge-icon">◍</span>
-            </span>
-            <span class="movie-still">
-              <img src="assets/one-man-band.png" alt="Imagem do filme The One-Man Band" loading="lazy">
-            </span>
-            <span class="movie-copy">
-              <h2>The One-Man Band</h2>
-              <p class="credit">(França, Georges Méliès)</p>
-              <p class="description">Músico toca vários instrumentos ao mesmo tempo. Humor e criatividade.</p>
-            </span>
-          </span>
-        </label>
-        <label class="movie-card" role="checkbox" aria-checked="false" style="--badge: #bd2f35">
-          <input class="movie-check" type="checkbox" data-id="08-the-big-swallow" aria-label="Marcar The Big Swallow como visto">
-          <span class="card-inner">
-            <span class="year-badge" aria-hidden="true">
-              <span class="year">1901</span>
-              <span class="badge-icon">➤</span>
-            </span>
-            <span class="movie-still">
-              <img src="assets/big-swallow.png" alt="Imagem do filme The Big Swallow" loading="lazy">
-            </span>
-            <span class="movie-copy">
-              <h2>The Big Swallow</h2>
-              <p class="credit">(Reino Unido, James Williamson)</p>
-              <p class="description">Homem engole uma andorinha em um truque cômico que fez muito sucesso.</p>
-            </span>
-          </span>
-        </label>
-        <label class="movie-card" role="checkbox" aria-checked="false" style="--badge: #15456f">
-          <input class="movie-check" type="checkbox" data-id="09-viagem-a-lua" aria-label="Marcar Viagem à Lua como visto">
-          <span class="card-inner">
-            <span class="year-badge" aria-hidden="true">
-              <span class="year">1902</span>
-              <span class="badge-icon">☾</span>
-            </span>
-            <span class="movie-still">
-              <img src="assets/voyage-lune.png" alt="Imagem do filme Viagem à Lua" loading="lazy">
-            </span>
-            <span class="movie-copy">
-              <h2>Viagem à Lua</h2>
-              <p class="credit">(França, Georges Méliès)</p>
-              <p class="description">Ícone do cinema. Viagem fantástica em que um foguete atinge o olho da Lua.</p>
-            </span>
-          </span>
-        </label>
-        <label class="movie-card" role="checkbox" aria-checked="false" style="--badge: #ba4b6b">
-          <input class="movie-check" type="checkbox" data-id="10-sage-femme-de-premiere-classe" aria-label="Marcar Sage-femme de première classe como visto">
-          <span class="card-inner">
-            <span class="year-badge" aria-hidden="true">
-              <span class="year">1902</span>
-              <span class="badge-icon">⚕</span>
-            </span>
-            <span class="movie-still">
-              <img src="assets/sage-femme.png" alt="Imagem do filme Sage-femme de première classe" loading="lazy">
-            </span>
-            <span class="movie-copy">
-              <h2>Sage-femme de première classe</h2>
-              <p class="credit">(França, Alice Guy)</p>
-              <p class="description">Comédia ficcional que mostra o talento de Alice Guy para personagens e situações cotidianas.</p>
-            </span>
-          </span>
-        </label>
-        <label class="movie-card" role="checkbox" aria-checked="false" style="--badge: #39733a">
-          <input class="movie-check" type="checkbox" data-id="11-the-great-train-robbery" aria-label="Marcar The Great Train Robbery como visto">
-          <span class="card-inner">
-            <span class="year-badge" aria-hidden="true">
-              <span class="year">1903</span>
-              <span class="badge-icon">▸</span>
-            </span>
-            <span class="movie-still">
-              <img src="assets/great-train-robbery.png" alt="Imagem do filme The Great Train Robbery" loading="lazy">
-            </span>
-            <span class="movie-copy">
-              <h2>The Great Train Robbery</h2>
-              <p class="credit">(EUA, Edwin S. Porter)</p>
-              <p class="description">Marco da narrativa e da montagem. Inclui ação, suspense e o primeiro plano americano.</p>
-            </span>
-          </span>
-        </label>
-        <label class="movie-card" role="checkbox" aria-checked="false" style="--badge: #58417a">
-          <input class="movie-check" type="checkbox" data-id="12-the-wonderful-living-fan" aria-label="Marcar The Wonderful Living Fan como visto">
-          <span class="card-inner">
-            <span class="year-badge" aria-hidden="true">
-              <span class="year">1904</span>
-              <span class="badge-icon">✺</span>
-            </span>
-            <span class="movie-still">
-              <img src="assets/wonderful-living-fan.png" alt="Imagem do filme The Wonderful Living Fan" loading="lazy">
-            </span>
-            <span class="movie-copy">
-              <h2>The Wonderful Living Fan</h2>
-              <p class="credit">(França, Georges Méliès)</p>
-              <p class="description">Leque ganha vida e dança. Fantasia científica com efeitos.</p>
-            </span>
-          </span>
-        </label>
-        <label class="movie-card" role="checkbox" aria-checked="false" style="--badge: #604080">
-          <input class="movie-check" type="checkbox" data-id="13-a-viagem-impossivel" aria-label="Marcar A Viagem Impossível como visto">
-          <span class="card-inner">
-            <span class="year-badge" aria-hidden="true">
-              <span class="year">1904</span>
-              <span class="badge-icon">◌</span>
-            </span>
-            <span class="movie-still">
-              <img src="assets/voyage-impossible.png" alt="Imagem do filme A Viagem Impossível" loading="lazy">
-            </span>
-            <span class="movie-copy">
-              <h2>A Viagem Impossível</h2>
-              <p class="credit">(França, Georges Méliès)</p>
-              <p class="description">Viagem fantástica em balão repleta de criaturas e paisagens incríveis.</p>
-            </span>
-          </span>
-        </label>
-        <label class="movie-card" role="checkbox" aria-checked="false" style="--badge: #c58418">
-          <input class="movie-check" type="checkbox" data-id="14-the-kleptomaniac" aria-label="Marcar The Kleptomaniac como visto">
-          <span class="card-inner">
-            <span class="year-badge" aria-hidden="true">
-              <span class="year">1905</span>
-              <span class="badge-icon">✋</span>
-            </span>
-            <span class="movie-still">
-              <img src="assets/kleptomaniac.png" alt="Imagem do filme The Kleptomaniac" loading="lazy">
-            </span>
-            <span class="movie-copy">
-              <h2>The Kleptomaniac</h2>
-              <p class="credit">(EUA, Edwin S. Porter)</p>
-              <p class="description">Comédia sobre um ladrão compulsivo. Uso criativo da câmera e da edição.</p>
-            </span>
-          </span>
-        </label>
-        <label class="movie-card" role="checkbox" aria-checked="false" style="--badge: #c43e3d">
-          <input class="movie-check" type="checkbox" data-id="15-les-resultats-du-feminisme" aria-label="Marcar Les Résultats du Féminisme como visto">
-          <span class="card-inner">
-            <span class="year-badge" aria-hidden="true">
-              <span class="year">1906</span>
-              <span class="badge-icon">⚑</span>
-            </span>
-            <span class="movie-still">
-              <img src="assets/resultats-feminisme.png" alt="Imagem do filme Les Résultats du Féminisme" loading="lazy">
-            </span>
-            <span class="movie-copy">
-              <h2>Les Résultats du Féminisme</h2>
-              <p class="credit">(França, Alice Guy)</p>
-              <p class="description">Comédia satírica sobre inversão de papéis de gênero. Surpreendente e moderna para a época.</p>
-            </span>
-          </span>
-        </label>
-        <label class="movie-card" role="checkbox" aria-checked="false" style="--badge: #8a3f19">
-          <input class="movie-check" type="checkbox" data-id="16-the-story-of-the-kelly-gang" aria-label="Marcar The Story of the Kelly Gang como visto">
-          <span class="card-inner">
-            <span class="year-badge" aria-hidden="true">
-              <span class="year">1906</span>
-              <span class="badge-icon">◆</span>
-            </span>
-            <span class="movie-still">
-              <img src="assets/kelly-gang.png" alt="Imagem do filme The Story of the Kelly Gang" loading="lazy">
-            </span>
-            <span class="movie-copy">
-              <h2>The Story of the Kelly Gang</h2>
-              <p class="credit">(Austrália, Charles Tait)</p>
-              <p class="description">Primeiro longa-metragem narrativo da história. Baseado em fatos reais.</p>
-            </span>
-          </span>
-        </label>
-        <label class="movie-card" role="checkbox" aria-checked="false" style="--badge: #4a3a79">
-          <input class="movie-check" type="checkbox" data-id="17-la-vie-du-christ" aria-label="Marcar La Vie du Christ como visto">
-          <span class="card-inner">
-            <span class="year-badge" aria-hidden="true">
-              <span class="year">1906</span>
-              <span class="badge-icon">✝</span>
-            </span>
-            <span class="movie-still">
-              <img src="assets/vie-du-christ.png" alt="Imagem do filme La Vie du Christ" loading="lazy">
-            </span>
-            <span class="movie-copy">
-              <h2>La Vie du Christ</h2>
-              <p class="credit">(França, Alice Guy)</p>
-              <p class="description">Épico religioso com mais de 30 minutos e centenas de figurantes. Antecipa os grandes épicos do cinema.</p>
-            </span>
-          </span>
-        </label>
-        <label class="movie-card" role="checkbox" aria-checked="false" style="--badge: #038481">
-          <input class="movie-check" type="checkbox" data-id="18-ben-hur" aria-label="Marcar Ben-Hur como visto">
-          <span class="card-inner">
-            <span class="year-badge" aria-hidden="true">
-              <span class="year">1907</span>
-              <span class="badge-icon">▥</span>
-            </span>
-            <span class="movie-still">
-              <img src="assets/ben-hur.png" alt="Imagem do filme Ben-Hur" loading="lazy">
-            </span>
-            <span class="movie-copy">
-              <h2>Ben-Hur</h2>
-              <p class="credit">(EUA, Sidney Olcott e Frank Oakes Rose)</p>
-              <p class="description">Épico bíblico de grande espetáculo e batalhas de bigas.</p>
-            </span>
-          </span>
-        </label>
-        <label class="movie-card" role="checkbox" aria-checked="false" style="--badge: #0a8485">
-          <input class="movie-check" type="checkbox" data-id="19-lenfant-prodigue" aria-label="Marcar L’Enfant Prodigue como visto">
-          <span class="card-inner">
-            <span class="year-badge" aria-hidden="true">
-              <span class="year">1907</span>
-              <span class="badge-icon">▥</span>
-            </span>
-            <span class="movie-still">
-              <img src="assets/enfant-prodigue.png" alt="Imagem do filme L’Enfant Prodigue" loading="lazy">
-            </span>
-            <span class="movie-copy">
-              <h2>L’Enfant Prodigue</h2>
-              <p class="credit">(França, Michel Carré)</p>
-              <p class="description">Drama baseado na parábola bíblica. Um dos primeiros longas europeus conservados.</p>
-            </span>
-          </span>
-        </label>
-        <label class="movie-card" role="checkbox" aria-checked="false" style="--badge: #563a82">
-          <input class="movie-check" type="checkbox" data-id="20-fantasmagorie" aria-label="Marcar Fantasmagorie como visto">
-          <span class="card-inner">
-            <span class="year-badge" aria-hidden="true">
-              <span class="year">1908</span>
-              <span class="badge-icon">✒</span>
-            </span>
-            <span class="movie-still">
-              <img src="assets/fantasmagorie.png" alt="Imagem do filme Fantasmagorie" loading="lazy">
-            </span>
-            <span class="movie-copy">
-              <h2>Fantasmagorie</h2>
-              <p class="credit">(França, Émile Cohl)</p>
-              <p class="description">Primeira animação desenhada do mundo. Simples e ousada.</p>
-            </span>
-          </span>
-        </label>
-        <label class="movie-card" role="checkbox" aria-checked="false" style="--badge: #4c3977">
-          <input class="movie-check" type="checkbox" data-id="21-o-assassinato-do-duque-de-guise" aria-label="Marcar O Assassinato do Duque de Guise como visto">
-          <span class="card-inner">
-            <span class="year-badge" aria-hidden="true">
-              <span class="year">1908</span>
-              <span class="badge-icon">✒</span>
-            </span>
-            <span class="movie-still">
-              <img src="assets/assassinat-guise.png" alt="Imagem do filme O Assassinato do Duque de Guise" loading="lazy">
-            </span>
-            <span class="movie-copy">
-              <h2>O Assassinato do Duque de Guise</h2>
-              <p class="credit">(França, André Calmettes e Charles Le Bargy)</p>
-              <p class="description">Reconstrução histórica de um crime político real.</p>
-            </span>
-          </span>
-        </label>
-        <label class="movie-card" role="checkbox" aria-checked="false" style="--badge: #c05e16">
-          <input class="movie-check" type="checkbox" data-id="22-a-corner-in-wheat" aria-label="Marcar A Corner in Wheat como visto">
-          <span class="card-inner">
-            <span class="year-badge" aria-hidden="true">
-              <span class="year">1909</span>
-              <span class="badge-icon">♒</span>
-            </span>
-            <span class="movie-still">
-              <img src="assets/corner-wheat.png" alt="Imagem do filme A Corner in Wheat" loading="lazy">
-            </span>
-            <span class="movie-copy">
-              <h2>A Corner in Wheat</h2>
-              <p class="credit">(EUA, D. W. Griffith)</p>
-              <p class="description">Drama rural que mostra empatia e sensibilidade na mise-en-scène e na atuação.</p>
-            </span>
-          </span>
-        </label>
-        <label class="movie-card" role="checkbox" aria-checked="false" style="--badge: #4c7b3a">
-          <input class="movie-check" type="checkbox" data-id="23-frankenstein" aria-label="Marcar Frankenstein como visto">
-          <span class="card-inner">
-            <span class="year-badge" aria-hidden="true">
-              <span class="year">1910</span>
-              <span class="badge-icon">ϟ</span>
-            </span>
-            <span class="movie-still">
-              <img src="assets/frankenstein.png" alt="Imagem do filme Frankenstein" loading="lazy">
-            </span>
-            <span class="movie-copy">
-              <h2>Frankenstein</h2>
-              <p class="credit">(EUA, J. Searle Dawley)</p>
-              <p class="description">Primeira adaptação cinematográfica do clássico de Mary Shelley.</p>
-            </span>
-          </span>
-        </label>
-        <label class="movie-card" role="checkbox" aria-checked="false" style="--badge: #104c78">
-          <input class="movie-check" type="checkbox" data-id="24-linferno" aria-label="Marcar L’Inferno como visto">
-          <span class="card-inner">
-            <span class="year-badge" aria-hidden="true">
-              <span class="year">1911</span>
-              <span class="badge-icon">♨</span>
-            </span>
-            <span class="movie-still">
-              <img src="assets/inferno.png" alt="Imagem do filme L’Inferno" loading="lazy">
-            </span>
-            <span class="movie-copy">
-              <h2>L’Inferno</h2>
-              <p class="credit">(Itália, Francesco Bertolini, Adolfo Padovan e Giuseppe de Liguoro)</p>
-              <p class="description">Primeiro filme da Divina Comédia de Dante. Ambicioso e visualmente impressionante.</p>
-            </span>
-          </span>
-        </label>
-        <label class="movie-card" role="checkbox" aria-checked="false" style="--badge: #b73532">
-          <input class="movie-check" type="checkbox" data-id="25-the-musketeers-of-pig-alley" aria-label="Marcar The Musketeers of Pig Alley como visto">
-          <span class="card-inner">
-            <span class="year-badge" aria-hidden="true">
-              <span class="year">1912</span>
-              <span class="badge-icon">⚔</span>
-            </span>
-            <span class="movie-still">
-              <img src="assets/musketeers-pig-alley.png" alt="Imagem do filme The Musketeers of Pig Alley" loading="lazy">
-            </span>
-            <span class="movie-copy">
-              <h2>The Musketeers of Pig Alley</h2>
-              <p class="credit">(EUA, D. W. Griffith)</p>
-              <p class="description">Aventura policial com montagem avançada e perseguições empolgantes.</p>
-            </span>
-          </span>
-        </label>
-        <label class="movie-card" role="checkbox" aria-checked="false" style="--badge: #bd2f35">
-          <input class="movie-check" type="checkbox" data-id="26-o-milagre-the-miracle" aria-label="Marcar O Milagre (The Miracle) como visto">
-          <span class="card-inner">
-            <span class="year-badge" aria-hidden="true">
-              <span class="year">1912</span>
-              <span class="badge-icon">⚔</span>
-            </span>
-            <span class="movie-still">
-              <img src="assets/miracle.png" alt="Imagem do filme O Milagre (The Miracle)" loading="lazy">
-            </span>
-            <span class="movie-copy">
-              <h2>O Milagre (The Miracle)</h2>
-              <p class="credit">(Reino Unido, Michel Carré)</p>
-              <p class="description">Épico em duas partes com cerca de 2 horas de duração. Grande espetáculo internacional.</p>
-            </span>
-          </span>
-        </label>
-        <label class="movie-card" role="checkbox" aria-checked="false" style="--badge: #bf5370">
-          <input class="movie-check" type="checkbox" data-id="27-a-fool-and-his-money" aria-label="Marcar A Fool and His Money como visto">
-          <span class="card-inner">
-            <span class="year-badge" aria-hidden="true">
-              <span class="year">1912</span>
-              <span class="badge-icon">✣</span>
-            </span>
-            <span class="movie-still">
-              <img src="assets/fool-money.png" alt="Imagem do filme A Fool and His Money" loading="lazy">
-            </span>
-            <span class="movie-copy">
-              <h2>A Fool and His Money</h2>
-              <p class="credit">(EUA, Alice Guy)</p>
-              <p class="description">Um dos primeiros filmes com elenco totalmente negro conhecidos. Marco histórico de representação.</p>
-            </span>
-          </span>
-        </label>
-        <label class="movie-card" role="checkbox" aria-checked="false" style="--badge: #07858d">
-          <input class="movie-check" type="checkbox" data-id="28-fantomas" aria-label="Marcar Fantômas como visto">
-          <span class="card-inner">
-            <span class="year-badge" aria-hidden="true">
-              <span class="year">1913</span>
-              <span class="badge-icon">🎭</span>
-            </span>
-            <span class="movie-still">
-              <img src="assets/fantomas.png" alt="Imagem do filme Fantômas" loading="lazy">
-            </span>
-            <span class="movie-copy">
-              <h2>Fantômas</h2>
-              <p class="credit">(França, Louis Feuillade)</p>
-              <p class="description">Série policial sobre o mestre do crime Fantômas. Início das narrativas seriadas no cinema.</p>
-            </span>
-          </span>
-        </label>
-        <label class="movie-card" role="checkbox" aria-checked="false" style="--badge: #07858d">
-          <input class="movie-check" type="checkbox" data-id="29-quo-vadis" aria-label="Marcar Quo Vadis? como visto">
-          <span class="card-inner">
-            <span class="year-badge" aria-hidden="true">
-              <span class="year">1913</span>
-              <span class="badge-icon">🎭</span>
-            </span>
-            <span class="movie-still">
-              <img src="assets/quo-vadis.png" alt="Imagem do filme Quo Vadis?" loading="lazy">
-            </span>
-            <span class="movie-copy">
-              <h2>Quo Vadis?</h2>
-              <p class="credit">(Itália, Enrico Guazzoni)</p>
-              <p class="description">Épico histórico ambientado na Roma antiga. Luxuosos sets e grande apelo popular.</p>
-            </span>
-          </span>
-        </label>
-        <label class="movie-card" role="checkbox" aria-checked="false" style="--badge: #c57a14">
-          <input class="movie-check" type="checkbox" data-id="30-cabiria" aria-label="Marcar Cabiria como visto">
-          <span class="card-inner">
-            <span class="year-badge" aria-hidden="true">
-              <span class="year">1914</span>
-              <span class="badge-icon">◡</span>
-            </span>
-            <span class="movie-still">
-              <img src="assets/cabiria.png" alt="Imagem do filme Cabiria" loading="lazy">
-            </span>
-            <span class="movie-copy">
-              <h2>Cabiria</h2>
-              <p class="credit">(Itália, Giovanni Pastrone)</p>
-              <p class="description">Épico monumental que elevou o cinema a um novo patamar artístico e técnico.</p>
-            </span>
-          </span>
-        </label>
-        <label class="movie-card" role="checkbox" aria-checked="false" style="--badge: #16456e">
-          <input class="movie-check" type="checkbox" data-id="31-the-birth-of-a-nation" aria-label="Marcar The Birth of a Nation como visto">
-          <span class="card-inner">
-            <span class="year-badge" aria-hidden="true">
-              <span class="year">1915</span>
-              <span class="badge-icon">▤</span>
-            </span>
-            <span class="movie-still">
-              <img src="assets/birth-nation.png" alt="Imagem do filme The Birth of a Nation" loading="lazy">
-            </span>
-            <span class="movie-copy">
-              <h2>The Birth of a Nation</h2>
-              <p class="credit">(EUA, D. W. Griffith)</p>
-              <p class="description">Obra controversa, mas decisiva para a linguagem do cinema: montagem paralela, escala épica e narrativa complexa.</p>
-            </span>
-          </span>
-        </label>
+    <section class="toolbar" aria-label="Ferramentas de busca e filtro">
+      <label class="search">
+        <span>Buscar filme</span>
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Digite título, ano ou diretor..."
+          autocomplete="off"
+        />
+      </label>
+
+      <div class="filters" role="group" aria-label="Filtros do checklist">
+        <button class="filter-button active" data-filter="all" type="button">Todos</button>
+        <button class="filter-button" data-filter="pending" type="button">Pendentes</button>
+        <button class="filter-button" data-filter="done" type="button">Marcados</button>
+      </div>
+    </section>
+
+    <section id="lista" class="movie-list" aria-label="Lista de filmes">
+      <!-- Os filmes entram aqui via JavaScript -->
     </section>
   </main>
 
